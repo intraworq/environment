@@ -1,0 +1,27 @@
+<VirtualHost *:80>
+  ServerAdmin <%= @node[:apache][:server_admin] %>
+  ServerName <%= @node[:apache][:server_name] %>
+  ServerAlias <% @node[:apache][:server_alias] %>
+  DocumentRoot <%= @node[:apache][:docroot] %>/<%= @node[:apache][:app][:name] %>
+
+  <Directory />
+    Options FollowSymLinks
+    AllowOverride None
+  </Directory>
+
+  <Directory <%= @node[:apache][:dir]%>/<%= @node[:apache][:app][:name] %>>
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride None
+    Order allow,deny
+    allow from all
+  </Directory>
+
+  ErrorLog ${APACHE_LOG_DIR}/error.log
+
+  # Possible values include: debug, info, notice, warn, error, crit,
+  # alert, emerg.
+  LogLevel info
+
+  ErrorLog <%= @node[:apache][:log_dir]%>/<%= @node[:apache][:app][:name] %>-error.log
+  CustomLog <%= @node[:apache][:log_dir]%>/<%= @node[:apache][:app][:name] %>-access.log combined
+</VirtualHost>
