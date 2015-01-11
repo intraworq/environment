@@ -43,6 +43,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # argument is a set of non-required options.
   config.vm.synced_folder "src", "/srv/www/planq"
   config.vm.synced_folder "log", "/srv/log"
+  config.vm.synced_folder "trace", "/var/trace"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.

@@ -5,6 +5,7 @@ include_recipe "php::module_sqlite3"
 include_recipe "php::module_ldap"
 include_recipe 'apache2'
 include_recipe "apache2::mod_php5"
+include_recipe "xdebug"
 
 directory node['apache']['log_dir'] do
   owner 'www-data'

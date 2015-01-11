@@ -12,6 +12,13 @@ directory node['mysql']['datadir'] do
   action :create
 end
 
+directory node['mysql']['logdir'] do
+  owner 'mysql'
+  group 'mysql'
+  mode '0644'
+  action :create
+end
+
 mysql_service 'default' do
   port node['mysql']['port']
   bind_address '0.0.0.0'
