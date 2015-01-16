@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 # planq-cookbook
 
-TODO: Enter the cookbook description here.
+TODO: Development environment
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+Debian 7
 
 ## Attributes
 
@@ -40,8 +39,4 @@ Include `planq` in your node's `run_list`:
 
 ## License and Authors
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
-=======
-# environment
-Vagrant based environment.
->>>>>>> 98ce198f75ec936e27722b752e21e05f52ee3119
+Author:: Bolek
