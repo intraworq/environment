@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # planq-cookbook
 
 TODO: Enter the cookbook description here.
@@ -40,3 +41,7 @@ Include `planq` in your node's `run_list`:
 ## License and Authors
 
 Author:: YOUR_NAME (<YOUR_EMAIL>)
+=======
+# environment
+Vagrant based environment.
+>>>>>>> 98ce198f75ec936e27722b752e21e05f52ee3119
